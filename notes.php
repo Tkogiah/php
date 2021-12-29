@@ -76,8 +76,42 @@
         echo ceil(3.1); //always rounds decimals up
         echo '<br>';
         echo floor(3.9); //always rounds decimals down
+    ?>
 
+    <?php 
+        echo '<br><br>';
+        echo 'working with user input';
+    ?>
+
+    <form action="notes.php" method="get">
+
+        Name: <input type="text" name="name">
+        <input type="submit">
+
+    </form>
+
+    <?php echo $_GET["name"]?>
+
+    <?php 
+        echo '<br><br>';
+        echo 'building a basic calculator';
+    ?>
+
+    <form action="notes.php" method="get">
+
+        First number: <input type="number" name="first">
+        <br>
+        Second Number: <input type="number" name="second">
+        <input type="submit">
+
+    </form>
+
+    <?php 
+        echo $_GET['first'] + $_GET['second'];
         
     ?>
+
+
+
 </body>
 </html>
