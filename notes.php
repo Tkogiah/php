@@ -208,5 +208,69 @@
         <input type="submit">
     </form>
 
+    <?php 
+    //section 10
+    echo '<br><br>';
+    echo "working with classes, getters and setters, public and private variables <br>";
+
+    class Movie {
+        private $title;
+        private $rating;
+
+        function __construct($title, $rating)
+        {
+            $this->title = $title;
+            $this->rating = $rating;
+        }
+
+        function getTitle()
+        {
+            return $this->title;
+        }
+        function getRating()
+        {
+            return $this->rating;
+        }
+        function setTitle($title)
+        {
+            if(is_string($title)) {
+                $this->title = $title;
+            }
+            else {
+                echo "<br> !!title needs to be a string!! <br>";
+            }
+            
+        }
+        function setRating($rating)
+        {
+            if($rating == "G" || $rating == "PG" || $rating == "PG-13" || $rating == "R" || $rating == "NR") {
+                $this->rating = $rating;
+            } else {
+                $this->rating = 'NR';
+            }
+            
+        }
+    }
+
+    $avengers = new Movie("Avenger's", "PG-13");
+    $avengers->setTitle("Avengers");
+    echo $avengers->getTitle();
+    echo '<br>';
+    $avengers->setTitle("doody");
+    echo $avengers->getTitle();
+    echo '<br>';
+    echo $avengers->getRating();
+    echo '<br>';
+    $avengers->setRating('toots');
+    echo '<br>';
+    echo $avengers->getRating();
+    $avengers->setRating('R');
+    echo '<br>';
+    echo $avengers->getRating();
+
+
+
+    ?>
+
 </body>
 </html>
