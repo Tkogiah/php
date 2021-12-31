@@ -215,12 +215,12 @@
 
     class Movie {
         private $title;
-        private $rating;
+        private $rating;//private was set so that getters are the only way to access the data
 
         function __construct($title, $rating)
         {
             $this->title = $title;
-            $this->rating = $rating;
+            $this->setRating($rating);//this is important to notice
         }
 
         function getTitle()
@@ -267,7 +267,51 @@
     $avengers->setRating('R');
     echo '<br>';
     echo $avengers->getRating();
+    echo '<br>';
+    $movie = new Movie("poopoo", "ggggg");
+    echo $movie->getTitle();
+    echo '<br>';
+    echo $movie->getRating();
+    echo '<br>';
 
+
+    ?>
+
+    <?php 
+        echo '<br><br>';
+        echo 'working with inheritance';
+        echo '<br><br>';
+
+        class Chef {
+            function makeChicken(){
+                echo "the chef makes chicken <br>";
+            }
+            function makeSalad(){
+                echo "the chef makes salad <br>";
+            }
+            function makeSpecialDish(){
+                echo "the chef makes special dish <br>";
+            }
+        }
+
+        class ItalianChef extends Chef {
+            function makePasta() {
+                echo 'italian chef makes pasta';
+            }
+            //overriding function
+            function makeSpecialDish(){
+                echo "Italian chef makes pizza";
+            }
+        }
+
+        $chef = new Chef();
+        $italianChef = new ItalianChef();
+        echo $chef->makeSpecialDish();
+        echo '<br>';
+        echo $italianChef->makeSpecialDish();
+        echo '<br>';
+        
+        
 
 
     ?>
