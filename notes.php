@@ -11,6 +11,9 @@
     <?php
     //marcus@marcus-HP-Z420-Workstation:~/Desktop/coding/php$ php -S localhost:4000
     //always put ';' (semicolon) at the end of each line
+    //opening xampp
+    //cd /opt/lampp
+    //sudo ./manager-linux-x64.run
         //section 0
         $sectionNumber = 0;
         include "section.php";
