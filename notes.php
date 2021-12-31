@@ -7,9 +7,13 @@
     <title>Document</title>
 </head>
 <body>
+    <?php include "header.html" ?>
     <?php
     //marcus@marcus-HP-Z420-Workstation:~/Desktop/coding/php$ php -S localhost:4000
     //always put ';' (semicolon) at the end of each line
+        //section 0
+        $sectionNumber = 0;
+        include "section.php";
         echo 'open VSCode to check out my active notes on php development';
         $string = 'John';
         $integer = 35;
@@ -19,6 +23,8 @@
         echo "<br> Hello $string $integer and $float";
 
         //section 1
+        $sectionNumber = 1;
+        include "section.php";
         echo '<br><br>';
         echo 'working with strings';
         echo '<br>';
@@ -38,6 +44,8 @@
         echo substr($string, 1, 3); //will pull a 3 char substring starting at index 1.
 
         //section 2
+        $sectionNumber = 2;
+        include "section.php";
         echo '<br><br>';
         echo 'working with numbers';
         echo '<br>';
@@ -82,6 +90,8 @@
     
     <?php 
     //section 3
+        $sectionNumber = 3;
+        include "section.php";
         echo '<br><br>';
         echo 'working with user input';
     ?>
@@ -97,6 +107,8 @@
 
     <?php 
     //section 4
+        $sectionNumber = 4; 
+        include "section.php";  
         echo '<br><br>';
         echo 'building a basic calculator';
     ?>
@@ -117,6 +129,8 @@
 
     <?php
     //section 5
+        $sectionNumber = 5;
+        include "section.php";
         echo '<br><br>';
         echo 'building a mad libs game';
     ?>
@@ -141,6 +155,8 @@
     
     <?php
     //section 6
+        $sectionNumber = 6;
+        include "section.php";
         echo '<br><br>';
         echo 'working with URL parameters';
     ?>
@@ -163,6 +179,8 @@
 
     <?php
     //section 7
+        $sectionNumber = 7;
+        include "section.php";
         echo '<br><br>';
         echo 'post vs get';
         echo '<br>';
@@ -170,7 +188,9 @@
     ?>
 
     <?php
-    //section 8 
+    //section 8
+        $sectionNumber = 8;
+        include "section.php";
         echo '<br><br>';
         echo 'working with arrays <br>';
         $friends = array('kevin', 'karen','oscar', 'jim');
@@ -200,6 +220,8 @@
 
     <?php 
     //section 9
+        $sectionNumber = 9;
+        include "section.php";
         echo "<br><br>";
         echo "working with associated arrays<br>";
     ?>
@@ -210,8 +232,10 @@
 
     <?php 
     //section 10
-    echo '<br><br>';
-    echo "working with classes, getters and setters, public and private variables <br>";
+        $sectionNumber = 10;
+        include "section.php";
+        echo '<br><br>';
+        echo "working with classes, getters and setters, public and private variables <br>";
 
     class Movie {
         private $title;
@@ -278,6 +302,9 @@
     ?>
 
     <?php 
+    //section 11
+        $sectionNumber = 11;
+        include "section.php";
         echo '<br><br>';
         echo 'working with inheritance';
         echo '<br><br>';
@@ -314,6 +341,15 @@
         
 
 
+    ?>
+    <?php 
+        //section 12
+        $sectionNumber = 12;
+        include "section.php";
+        echo '<br><br>';
+        echo 'including html the header at the top of the page is part of this section';
+        
+        include "footer.html";
     ?>
 
 </body>
